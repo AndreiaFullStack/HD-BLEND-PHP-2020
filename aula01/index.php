@@ -71,31 +71,60 @@
 }
 
 ?>
-
+<p> Crie uma função que receba o genero de uma pessoa, onde la poderá informar Masculino ou Feminino, se informar 
+masculino iremos retornar a mensagem Genero informado foi masculino, se informar Feminino iremos retornar a mensagem genero
+caso contrario iremo retornar outros. Utilizando Shitch
 <?php
-        function generoPessoa($i) {
-            switch ($i) {
-            case 0:
-            echo "$i igual 0";
+        function validaGenero($x) {
+            switch ($x) {
+            case 'masculino':
+                return "Masculino";
+                break;
+            case 'feminino':
+                return "Feminino";
+                break;
+            default:
+                return "Outros";
             break;
-        case 1:
-            echo "$i igual 1";
-            break;
-        case 2:
-            echo "$i igual 2";
-            break;
-        default:
-            echo "qualquer número maior que 2";
-            break;
+        }
+      
 
 }
 
-}
 
 ?>
 
-R: Foi criado no código a função validaNumero e foi informado como parâmetro o número 2,
-como retorno da função tivemos: <br> <?php echo validaNumero(2); ?>
+
+R: Foi criado no código a função validaGenero e foi informado como parâmetro a string Feminino,
+como retorno da função tivemos: <br> <?php echo validaGenero(2); ?>
+
+<hr>
+<h1>Arrays</h1>
+<p> Arrays Simples </p>
+
+<?php
+    // declarando array vazio
+    $animais = [];
+    // o array simples so tem os valores, não nos preocupamos em controlar as posições
+    $animais = ["Leão", "Girafa", "Cachorro", "Gato", 1, true];
+
+
+    // uma forma de debugar variavies no php para saber os tipos, valores, tamanho dos valores.
+    echo "<pre>";
+    var_dump ($animais);
+    echo "</pre>";
+
+?>
+<p>Array Associativo</p>
+
+<?php
+    //o array associativo nos dá a possibilidade de atribuir valores as nossas posições
+    $usuario = [
+            "nome" => "Victor", 
+            "email" = "andreiagestaocultural@gmail.com",
+
+
+?>
 
     </body>
 </html>
