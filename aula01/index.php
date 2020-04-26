@@ -110,6 +110,7 @@ como retorno da função tivemos: <br> <?php echo validaGenero(2); ?>
 
 
     // uma forma de debugar variavies no php para saber os tipos, valores, tamanho dos valores.
+    // percorrendo arrays animais para destrinchar conteudo.
     echo "<pre>";
     var_dump ($animais);
     echo "</pre>";
@@ -120,11 +121,44 @@ como retorno da função tivemos: <br> <?php echo validaGenero(2); ?>
 <?php
     //o array associativo nos dá a possibilidade de atribuir valores as nossas posições
     $usuario = [
-            "nome" => "Victor", 
-            "email" = "andreiagestaocultural@gmail.com",
+            "nome" => "Andreia",
+            "email" => "andreiagestaocultural@gmail.com",
+            "senha" => "123456"
+    ];
 
+    // percorrendo arrays usuario para destrinchar conteudo.
+    echo "<pre>";
+    var_dump ($usuario);
+    echo "</pre>";
 
+    //montando frase pegando uma posição do array sem percorrer ele todo
+    //para aparecer na tela
+    echo "O nome do usuário é ".$usuario["nome"]; 
+    echo "O email é" .$usuario ["email"];
 ?>
 
+<p>Arrays de Arrays / Objetos </p>
+<p> Ocorre quando temos um array que dentro dele contém outros elementos, onde cada elemento possui como 
+valor um novo array relacionado a ele. </p>
+
+<?php
+    $listaDeUsuarios = [
+        "usuario1" => [
+            "nome" => "Andreia",
+            "email" => "andreiagestaocultural@gmail.com",
+            "senha" => "123456"                
+        ],
+        "usuario2" => [
+            "nome" => "Victor",
+            "email" => "victor@digitalhouse.com",
+            "senha" => "123456"
+        ]
+        ];
+        //exemplos de matriz bidimencional
+        
+        var_dump ($listaDeUsuarios["usuario1"]);
+        echo "Nome do usuario1: " .$listaDeUsuarios["usuario1"] ["nome"] . "Nome usuario 2: " .$listaDeUsuarios ["usuario2"] ["nome"]
+        
+        ?>
     </body>
 </html>
